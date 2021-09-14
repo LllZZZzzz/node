@@ -78,8 +78,31 @@ const fs = require('fs');
 // });
 // fs.renameSync('hello.txt','hhhhh.txt')
 // 监视文件的修改
-fs.watchFile('hhhhh.txt', (curr,pre) => {
-    console.log('修改后'+curr.size,'修改前'+pre.size)
+// fs.watchFile('hhhhh.txt', (curr,pre) => {
+//     console.log('修改后'+curr.size,'修改前'+pre.size)
+// })
+// fs.stat('./test', (err, data) => {
+//     if (err) {
+//         console.log(err)
+//         fs.mkdir('./test', (err) => { });
+//         return;
+//     }
+//     if (data.isDirectory()) {
+//         console.log('目录存在')
+//     } else {
+//         fs.unlink('./test', (err) => {
+//             if (err) {
+//                 console.log(err)
+//             } else {
+//                 fs.mkdir('./test', (err) => { })
+//             }
+//         })
+//     }
+// });
+
+// 将当前目录下的文件放在数组 并判断是否是文件夹
+fs.readdir('./', (error, data) => {
+    if (!error) {
+        console.log(data)
+    }
 })
-
-
