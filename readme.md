@@ -21,4 +21,8 @@
         - 常用的npm命令
             - npm info 包名 查看包信息
             - npm list 查看安装的所有包
+- http模块
+    - http.createServer(()=>{}).listen(3000)
+- EJS 后台模板 可以将数据库读取的文件数据填充在html上
+
 

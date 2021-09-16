@@ -9,12 +9,16 @@
 // p.then((res) => {
 //     console.log(res);
 // })
-async function test() {
-    return new Promise((resolve) => {
-        resolve(123)
-    })
-}
-async function main() {
-    console.log(await test())
-}
-main()
+// async function test() {
+//     return new Promise((resolve) => {
+//         resolve(123)
+//     })
+// }
+// async function main() {
+//     console.log(await test())
+// }
+// main()
+const fs = require('fs');
+fs.readdir('./', (err, data) => {
+    console.log(data)
+})

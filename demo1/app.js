@@ -24,4 +24,4 @@
 //     }
 // }).listen(3000)·
 // 自定义模块 放在node_modules 默认会去找文件夹中的index.js文件 如果有packages.json则入口文件为packages.json中的main值
-console.log(require('test'))
+// console.log(require('test'))

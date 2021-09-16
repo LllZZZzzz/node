@@ -1,5 +1,6 @@
 // 核心模块 fs 直接引入 不需要下载
 const fs = require('fs');
+const { resolve } = require('path');
 // // 同步
 // const file = fs.openSync('hellow.txt', 'w');
 // fs.writeSync(file, '今天星期五nanan ');
@@ -99,10 +100,43 @@ const fs = require('fs');
 //         })
 //     }
 // });
+// function isDir(dir) {
+//     return new Promise((resolve) => {
+//         fs.stat(dir, (err, data) => {
+//             if (!err) {
+//                 resolve(data.isDirectory());
+//             }
+//         })
+//     })
+// }
+// // 将当前目录下的文件放在数组 并判断是否是文件夹
+// fs.readdir('./', async (error, data) => {
+//     if (!error) {
+//         console.log(data)
+//     }
+//     for (var i = 0; i < data.length; i++) {
+//         // 我感觉await就是执行了.then  异步代码变成同步
+//         console.log(await isDir(data[i]));
+//         console.log(123)
+//     }
+// });
 
-// 将当前目录下的文件放在数组 并判断是否是文件夹
-fs.readdir('./', (error, data) => {
-    if (!error) {
-        console.log(data)
-    }
-})
+// function test() {
+//     var arr = [1, 2, 3]
+//     for (var i = 0; i < arr.length; i++){
+//         ((i) => {
+//             setTimeout(() => {
+//                 console.log(i)
+//             },500)
+//         })(i)
+//     }
+// }
+// test()
+// 这样就算报错 也阔以进行下去 哇哈哈哈
+try {
+    const res = fs.readFileSync('hahah.js');
+    console.log(res)
+} catch (error) {
+    
+}
+console.log(123)
